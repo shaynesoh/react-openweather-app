@@ -1,0 +1,30 @@
+.history {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        border-radius: 10px;
+        padding: 30px 20px;
+        gap: 30px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+        }
+    }
+}

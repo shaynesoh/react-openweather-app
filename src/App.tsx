@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import SearchScreen from "./screens/SearchScreen/SearchScreen";
+import WeatherScreen from "./screens/WeatherScreen/WeatherScreen";
+import TopLocation from "./components/TopLocation/TopLocation";
+import { useAppContext } from "./contexts/AppContext";
+import styles from "./App.module.scss";
 
-function App() {
+const App = () => {
+  const { isLoading, screen, location } = useAppContext();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles["app"]}>
+      {isLoading && (
+        <div className={styles["spinner"]}>
+          <span className={styles["spinner__icon"]}></span>
+        </div>
+      )}
+      {location && <TopLocation />}
+      <div className={styles["container"]}>
+        {screen === "search" ? (
+          <SearchScreen />
+        ) : (
+          <WeatherScreen />
+        )}
+      </div>
     </div>
   );
-}
+};
 
 export default App;

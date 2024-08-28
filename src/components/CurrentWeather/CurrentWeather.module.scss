@@ -1,0 +1,161 @@
+.current {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+    &__temperature,
+    &__details {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__temperature {
+        justify-content: center;
+        gap: 20px;
+
+        & div {
+            text-align: center;
+
+            .temperature {
+                font-size: 50px
+            }
+        }
+    }
+
+    &__details {
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+    &__humidity,
+    &__winds,
+    &__visibility {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .subtitle {
+            color: var(--grey)
+        }
+
+        .value {
+            span {
+                font-size: 14px;
+                font-weight: 300;
+            }
+        }
+    }
+
+    &__winds {
+        div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+        }
+    }
+}
+
+@media (min-width: 1201px) {
+    .current {
+        &__details {
+            width: 500px;
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .current {
+        &__details {
+            width: 400px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .current {
+        &__details {
+            width: 300px;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .current {
+
+        &__temperature,
+        &__details {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        &__temperature {
+            gap: 10px;
+
+            & div {
+                text-align: center;
+
+                .temperature {
+                    font-size: 50px
+                }
+            }
+        }
+
+        &__details {
+            justify-content: space-between;
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        &__humidity,
+        &__winds,
+        &__visibility {
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .current {
+
+        &__temperature,
+        &__details {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        &__temperature {
+            gap: 10px;
+
+            & div {
+                text-align: center;
+
+                .temperature {
+                    font-size: 50px
+                }
+            }
+        }
+
+        &__details {
+            justify-content: space-between;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        &__humidity,
+        &__winds,
+        &__visibility {
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+}

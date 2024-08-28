@@ -1,13 +1,128 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --blue: #2467ff;
+  --red: #e1426f;
+  --lightblue: #ecf6fb;
+  --grey: #a9a9a9;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  overscroll-behavior: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--blue);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  -webkit-transition: transform 0.35s ease-out;
+  -moz-transition: transform 0.35s ease-out;
+  -ms-transition: transform 0.35s ease-out;
+  -o-transition: transform 0.35s ease-out;
+  transition: transform 0.35s ease-out;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.03em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  line-height: 1;
+  overflow-wrap: break-word;
+}
+
+th,
+td,
+p {
+  font-size: 1rem;
+  line-height: 150%;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button,
+input[type="radio"],
+input[type="option"],
+input[type="date"],
+input[type="submit"],
+input[type="reset"] {
+  color: inherit;
+  border: none;
+  cursor: pointer;
+  outline: inherit;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
 }

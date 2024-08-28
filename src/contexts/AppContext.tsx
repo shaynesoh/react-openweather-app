@@ -82,6 +82,7 @@ export const AppProvider = ({ children }: any) => {
     };
 
     fetchWeather();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location]);
 
   return (

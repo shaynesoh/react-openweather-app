@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from "react";
+import React, { useCallback } from "react";
 import { useAppContext } from "../../contexts/AppContext";
 import styles from "./TopLocation.module.scss";
 import { ReactComponent as SearchIcon } from "../../assets/search.svg";

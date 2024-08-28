@@ -75,6 +75,7 @@ export const AppProvider = ({ children }: any) => {
           throw new Error("No data received");
         }
       } catch (error) {
+        setLocation("");
         setErrorMessage("Invalid country or city");
       } finally {
         setIsLoading(false);
